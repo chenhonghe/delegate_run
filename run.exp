@@ -1,0 +1,51 @@
+#!/usr/bin/expect -f
+
+set timeout -1
+set wallet_name "chh"
+set wh 1
+set is_first 1
+set bc_path "/data/src/bitsharesx/programs/client/"
+
+send_user "wallet name is: $wallet_name\n"
+send_user "wallet passphrase: "
+stty -echo
+expect_user -re "(.*)\n"
+stty echo
+
+set unlock_command_line "unlock 999999999 $expect_out(1,string)"
+
+while { $wh } {
+
+	if {$is_first} {
+        	spawn /usr/bin/screen -S bc
+
+		set is_first 0
+	} else {
+		exec ${bc_path}kill_bc.py
+		sleep 5
+	}
+
+	send "cd $bc_path\r"
+
+        expect {
+                "#" {
+                send "./bitshares_client --data-dir=/data  --server --httpport 9989 --rpcuser hehe --rpcpassword hic98372p~s0817s\r"
+                }
+        }
+
+	expect {
+		"(wallet closed) >>>" {
+		send "wallet_open $wallet_name\r"
+		}
+	}
+
+	expect {
+		"$wallet_name (locked) >>>" {
+		send "$unlock_command_line\r"
+		}
+	}
+
+	exec sleep 43200
+}
+
+expect "run_exp_eof"

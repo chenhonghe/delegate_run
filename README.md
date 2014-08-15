@@ -5,3 +5,19 @@ https://bitsharestalk.org/index.php?topic=6351.0
 上面是alt贴子中提到的有的原话，但贴子中没看到相应的脚本，所以周末花了点时间写了这个脚本。
 
 写差不多了才看到 alt 在英文版的已经有贴出脚本了，即然写了，就给写完整吧。
+
+
+如何使用：
+
+1、修改 run.exp  bc_path 这个变量，指的是bitshares_client的基本路径，及你的钱包名。
+
+2、
+#screen -S bcs
+#cd /data/src/bitsharesx/programs/client/
+#./run.exp
+
+3、转入相应钱包的密码
+
+4、ctrl+a+d 让screen进入后台运行。
+
+5、可以使用screen -r bcs 进入之前的screen
