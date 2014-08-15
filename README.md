@@ -9,12 +9,13 @@ https://bitsharestalk.org/index.php?topic=6351.0
 
 如何使用：
 
-1、修改 run.exp  bc_path 这个变量，指的是bitshares_client的基本路径，及你的钱包名。
+1、修改 run.exp  bc_path 这个变量，指的是bitshares_client的基本路径、的钱包名、及RPC的用户名及密码
 
 2、
-#screen -S bcs
-#cd /data/src/bitsharesx/programs/client/
-#./run.exp
+
+$screen -S bcs
+$cd /data/src/bitsharesx/programs/client/
+$./run.exp
 
 3、转入相应钱包的密码
 

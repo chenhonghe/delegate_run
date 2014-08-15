@@ -1,5 +1,8 @@
 #!/usr/bin/python
 
+#author:alt
+#https://bitsharestalk.org/index.php?action=profile;u=4465
+
 import requests
 import json
 import time
@@ -7,7 +10,7 @@ import os
 import logging
 
 safetime = 120  # safe time, 120 seconds is safe to restart client
-auth = ('hehe', 'hic98372p~s0817s') ## user/pass for rpc service
+auth = ('hee', 'hic98372p~s0817s') ## user/pass for rpc service
 url = "http://localhost:9989/rpc"  ## rpc url
 
 LOG_FILENAME="/tmp/bc_log.txt"

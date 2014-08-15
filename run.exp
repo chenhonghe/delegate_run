@@ -29,7 +29,7 @@ while { $wh } {
 
         expect {
                 "#" {
-                send "./bitshares_client --data-dir=/data  --server --httpport 9989 --rpcuser hehe --rpcpassword hic98372p~s0817s\r"
+                send "./bitshares_client --data-dir=/data  --server --httpport 9989 --rpcuser hee --rpcpassword hic98372p~s0817s\r"
                 }
         }
 
