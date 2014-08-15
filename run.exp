@@ -1,7 +1,7 @@
 #!/usr/bin/expect -f
 
 set timeout -1
-set wallet_name "chh"
+set wallet_name "cxhs"
 set wh 1
 set is_first 1
 set bc_path "/data/src/bitsharesx/programs/client/"
