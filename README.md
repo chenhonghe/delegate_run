@@ -14,8 +14,11 @@ https://bitsharestalk.org/index.php?topic=6351.0
 2、
 
 $screen -S bcs
+
 $cd /data/src/bitsharesx/programs/client/
+
 $./run.exp
+
 
 3、转入相应钱包的密码
 
